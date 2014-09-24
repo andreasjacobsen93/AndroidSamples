@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2012 GitHub Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~  http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <com.github.mobile.gauges.ui.airtraffic.AirTrafficView
+        android:id="@+id/air_traffic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/fl_header_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/header_background_top" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_header_line"
+        android:background="@drawable/map_header_background"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="1dp" >
+
+        <ImageView
+            android:id="@+id/iv_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_gauge_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text" />
+
+        <TextView
+            android:id="@+id/tv_gauge_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/ll_header"
+        android:background="@color/header_background_bottom" >
+    </FrameLayout>
+
+</RelativeLayout>
