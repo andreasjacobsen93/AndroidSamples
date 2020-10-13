@@ -55,7 +55,7 @@
         <viewpager-indicator.version>2.4.1</viewpager-indicator.version>
         <nineoldandroid.version>2.4.0</nineoldandroid.version>
         <robolectric.version>2.1.1</robolectric.version>
-        <junit.version>4.8.2</junit.version>
+        <junit.version>4.13.1</junit.version>
         <actionBarSherlock.version>4.2.0</actionBarSherlock.version>
         <password />
     </properties>
